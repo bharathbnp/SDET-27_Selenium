@@ -94,4 +94,9 @@ public class BaseAnnotationClass {
             dLib.closeDb();
 	    }
     
+	   
+	   public void base()
+	   {
+		   
+	   }
 }
