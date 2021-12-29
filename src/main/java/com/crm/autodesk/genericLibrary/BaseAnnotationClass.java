@@ -20,21 +20,22 @@ import com.crm.comcast.objectrepositoryUtility.Login;
 public class BaseAnnotationClass {
     /* create object to libraries*/
 	public FileUtility fLib = new FileUtility();
-	public JavaUtlity jLib = new JavaUtlity();
+	public JavaUtility jLib = new JavaUtility();
 	public WebDriverUtility wLib = new WebDriverUtility();
 	public ExcelUtility eLib = new ExcelUtility();
-	public DataBaseUtilities dLib = new DataBaseUtilities();
+	//public DataBaseUtilities dLib = new DataBaseUtilities();
 	public WebDriver driver = null;
 	public static  WebDriver sdriver = null;
     
-    @BeforeSuite(groups = {"smokeTest","regressionTest"})
-    public void config_BS() throws Throwable {
+    @BeforeSuite
+    public void config_BS() throws Throwable 
+    {
     	System.out.println("===================Conntact to DB=================");
-    	dLib.connectToDB();
+    	
     }
     
   //  @Parameters("BROWSER")
-    @BeforeClass(groups = {"smokeTest","regressionTest"})
+    @BeforeClass
     public void config_BC() throws Throwable {
 		/* read common data from Properties File*/
 		 String BROWSER = fLib.getPropertyKeyValue("browser");
@@ -59,7 +60,7 @@ public class BaseAnnotationClass {
 
     }
     
-    @BeforeMethod(groups = {"smokeTest","regressionTest"})
+    @BeforeMethod
     public void config_BM() throws Throwable{
         /* step 1 : login to APP */ 
         System.out.println("===login===");
@@ -70,7 +71,7 @@ public class BaseAnnotationClass {
         lp.loginToApp(URL, USERNAME, PASSWORD);
     }
     
-    @AfterMethod(groups = {"smokeTest","regressionTest"})
+    @AfterMethod
     public void config_AM() {
     	  System.out.println("===logout===");
 	    /* step 5 : logout */ 
@@ -79,7 +80,7 @@ public class BaseAnnotationClass {
     	
     }
 	
-	@AfterClass(groups = {"smokeTest","regressionTest"})
+	@AfterClass
 	public void config_AC() {
 
     	System.out.println("======close the BROWSER===========");
@@ -87,37 +88,14 @@ public class BaseAnnotationClass {
 		driver.quit();
 	}
 	
-	   @AfterSuite(groups = {"smokeTest","regressionTest"})
+	   @AfterSuite
 	
-	    public void config_AS() throws Throwable {
-	    	System.out.println("===================close DB connaction=================");
-            dLib.closeDb();
-	    }
-    
-<<<<<<< HEAD
-	   
-	   public void base()
+	    public void config_AS() throws Throwable
 	   {
-		   
-	   }
+	    	System.out.println("===================close DB connaction=================");
+        
+	    }
 
-public void base2()
-{
-	   
-}
-<<<<<<< HEAD
-
-=======
-public void base4()
->>>>>>> branch 'master' of https://github.com/bharathbnp/SDET-27_Selenium.git
-{
-	   
-}
-public void base5()
-{
-	
-}
-=======
 	  
->>>>>>> branch 'master' of https://github.com/bharathbnp/SDET-27_Selenium.git
+
 }
