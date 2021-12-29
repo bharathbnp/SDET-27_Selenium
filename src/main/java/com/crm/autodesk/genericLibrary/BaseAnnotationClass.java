@@ -105,6 +105,10 @@ public void base2()
 {
 	   
 }
+public void base3()
+{
+	   
+}
 =======
 	  
 >>>>>>> branch 'master' of https://github.com/bharathbnp/SDET-27_Selenium.git
