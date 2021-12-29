@@ -105,9 +105,17 @@ public void base2()
 {
 	   
 }
-public void base5()
+<<<<<<< HEAD
+
+=======
+public void base4()
+>>>>>>> branch 'master' of https://github.com/bharathbnp/SDET-27_Selenium.git
 {
 	   
+}
+public void base5()
+{
+	
 }
 =======
 	  
