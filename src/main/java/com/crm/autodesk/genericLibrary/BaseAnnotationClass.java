@@ -20,10 +20,10 @@ import com.crm.comcast.objectrepositoryUtility.Login;
 public class BaseAnnotationClass {
     /* create object to libraries*/
 	public FileUtility fLib = new FileUtility();
-	public JavaUtility jLib = new JavaUtility();
+	public JavaUtlity jLib = new JavaUtlity();
 	public WebDriverUtility wLib = new WebDriverUtility();
 	public ExcelUtility eLib = new ExcelUtility();
-	//public DataBaseUtilities dLib = new DataBaseUtilities();
+	public DataBaseUtilities dLib = new DataBaseUtilities();
 	public WebDriver driver = null;
 	public static  WebDriver sdriver = null;
     
@@ -74,7 +74,7 @@ public class BaseAnnotationClass {
     public void config_AM() {
     	  System.out.println("===logout===");
 	    /* step 5 : logout */ 
-    	com.crm.autodesk.ObjectRepository.HomePage hp = new com.crm.autodesk.ObjectRepository.HomePage(driver);
+    	HomePage hp = new HomePage(driver);
 	     hp.signOut();
     	
     }
