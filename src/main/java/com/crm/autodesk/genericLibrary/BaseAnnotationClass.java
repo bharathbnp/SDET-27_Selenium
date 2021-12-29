@@ -94,9 +94,18 @@ public class BaseAnnotationClass {
             dLib.closeDb();
 	    }
     
+<<<<<<< HEAD
 	   
 	   public void base()
 	   {
 		   
 	   }
+
+public void base2()
+{
+	   
+}
+=======
+	  
+>>>>>>> branch 'master' of https://github.com/bharathbnp/SDET-27_Selenium.git
 }
